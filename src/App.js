@@ -4,22 +4,12 @@ import List from "./components/List";
 import Coin from "./components/Coin";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import HeaderBottom from "./components/HeaderBottom";
 function App() {
   return (
     <Router>
       <Header />
-      <div className="bottom-header">
-        <div className="content">
-          🎉 Give us 5 stars on
-          <a
-            href="https://github.com/farukipekcom"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
-        </div>
-      </div>
+      <HeaderBottom />
       <Switch>
         <Route exact path="/">
           <List cryptoList={crypto} />
