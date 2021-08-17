@@ -1,0 +1,391 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+.coin-container {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  min-height: 100vh;
+  @include mq("large") {
+    margin: 0 auto;
+    width: 1200px;
+    padding: 30px;
+  }
+  .coin {
+    display: flex;
+    flex-direction: column;
+
+    .coin-header {
+      display: flex;
+      flex-direction: column;
+      @include mq("tablet") {
+        width: 100%;
+        flex-direction: row;
+      }
+      .coin-header-left {
+        width: 100%;
+        @include mq("desktop") {
+          width: max-content;
+        }
+        .header {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          margin-bottom: 20px;
+          .logo {
+            width: 48px;
+            height: 48px;
+          }
+          .title {
+            font-size: 32px;
+            margin-left: 20px;
+          }
+        }
+
+        .sub-header {
+          display: flex;
+          .tag {
+            background-color: $background-dark;
+            color: $color;
+            margin-top: 20px;
+            border-radius: 2px;
+            padding: 1px 8px;
+            font-size: 12px;
+            width: max-content;
+          }
+          .tag + .tag {
+            margin-left: 10px;
+          }
+        }
+
+        .social {
+          display: flex;
+          margin-top: 15px;
+          .link {
+            display: flex;
+            align-items: center;
+            a {
+              display: flex;
+              text-decoration: none;
+              border-radius: 5px;
+              font-size: 12px;
+              padding: 4px 8px;
+              background-color: $background-dark;
+              color: $color;
+            }
+            a:hover {
+              background-color: $background-dark-hover;
+              color: $color;
+            }
+            svg {
+              width: 14px;
+              margin-right: 5px;
+            }
+          }
+          .link + .link {
+            margin-left: 10px;
+          }
+        }
+      }
+      .coin-header-right {
+        margin-top: 40px;
+        @include mq("tablet") {
+          width: 100%;
+          margin-top: 0px;
+        }
+        @include mq("desktop") {
+          width: 50%;
+          margin-left: 100px;
+        }
+        svg {
+          width: 18px;
+          margin-right: 10px;
+        }
+        .prices {
+          display: flex;
+          align-items: center;
+          .price {
+            font-size: 32px;
+          }
+          .percentage {
+            margin-left: 20px;
+            .coin-up {
+              height: 30px;
+              width: max-content;
+              display: flex;
+              align-items: center;
+              background-color: #28d980;
+              border-radius: 5px;
+              font-size: 15px;
+              fill: #fff;
+              padding: 1px 5px 1px 5px;
+              span {
+                color: #fff;
+                margin-left: 0px;
+              }
+            }
+            .coin-down {
+              height: 30px;
+              width: max-content;
+              display: flex;
+              align-items: center;
+              background-color: #d92861;
+              border-radius: 5px;
+              font-size: 15px;
+              fill: #fff;
+              padding: 1px 5px 1px 5px;
+              span {
+                color: #fff;
+                margin-left: 0px;
+              }
+            }
+          }
+        }
+        .progress {
+          display: flex;
+          margin-top: 20px;
+          align-items: center;
+          width: 100%;
+          div + div {
+            margin-left: 20px;
+          }
+          .low {
+            font-size: 13px;
+            .price {
+              font-weight: 600;
+              font-size: 15px;
+              margin-left: 5px;
+            }
+          }
+          .high {
+            font-size: 13px;
+            .price {
+              font-weight: 600;
+              font-size: 15px;
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    .side {
+      display: flex;
+      flex-direction: column;
+      @include mq("tablet") {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+      @include mq("desktop") {
+        flex-wrap: nowrap;
+      }
+      .card {
+        background-color: $background;
+        color: $color;
+        width: 100%;
+        margin-top: 20px;
+        @include mq("tablet") {
+          width: 50%;
+        }
+
+        h3.title {
+          margin: 10px 0px;
+          font-weight: 600;
+          font-size: 18px;
+          color: #fff;
+        }
+        .price {
+          margin: 10px 0px;
+          font-size: 15px;
+          color: #f3f3f3;
+          font-weight: 500;
+        }
+        .percentage {
+          margin: 10px 0px;
+          .coin-up {
+            height: 30px;
+            width: max-content;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            font-size: 14px;
+            fill: #28d980;
+            svg {
+              width: 14px;
+            }
+            span {
+              margin-left: 10px;
+              color: #28d980;
+            }
+          }
+          .coin-down {
+            height: 30px;
+            width: max-content;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            font-size: 14px;
+            fill: #d92861;
+            svg {
+              width: 14px;
+            }
+            span {
+              margin-left: 10px;
+              color: #d92861;
+            }
+          }
+        }
+      }
+      .card + .card {
+        border-left: 1px solid rgba(150, 150, 150, 0.2);
+        @include mq("tablet") {
+          border: none;
+        }
+      }
+    }
+  }
+  .grafik {
+    margin-top: 40px;
+    @include mq("large") {
+      width: 1100px;
+    }
+  }
+
+  .bottom {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 100%;
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      font-size: 28px;
+      border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+      width: max-content;
+    }
+    .description {
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.2px;
+      margin-top: 20px;
+      line-height: 24px;
+      a {
+        color: $blue;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #5b5feb;
+      }
+    }
+    .history {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+      @include mq("tablet") {
+        flex-direction: row;
+      }
+      .atl {
+        padding: 20px;
+        cursor: pointer;
+        border-right: none;
+        width: calc(100% - 40px);
+        @include mq("tablet") {
+          max-width: 300px;
+        }
+        .title {
+          font-size: 18px;
+          font-weight: 700;
+        }
+        .date {
+          font-size: 15px;
+          margin-top: 10px;
+          font-weight: 400;
+        }
+        .price {
+          font-size: 15px;
+          margin-top: 10px;
+          font-weight: 600;
+          color: #d92861;
+          .percentage-info {
+            font-size: 11px;
+            letter-spacing: 0.1px;
+            line-height: 16px;
+            color: #eeeeee;
+          }
+        }
+      }
+      .atl:hover {
+        background-color: $blue;
+        // border-right: 1px solid $blue;
+      }
+      .ath {
+        padding: 20px;
+        cursor: pointer;
+        width: calc(100% - 40px);
+        @include mq("tablet") {
+          max-width: 300px;
+        }
+
+        .title {
+          font-size: 18px;
+          font-weight: 700;
+        }
+        .date {
+          font-size: 15px;
+          margin-top: 10px;
+          font-weight: 400;
+        }
+        .price {
+          font-size: 15px;
+          margin-top: 10px;
+          font-weight: 600;
+          color: #28d980;
+          .percentage-info {
+            font-size: 11px;
+            letter-spacing: 0.1px;
+            line-height: 16px;
+            color: #eeeeee;
+          }
+        }
+      }
+      .ath:hover {
+        background-color: $blue;
+      }
+    }
+  }
+
+  .coin-up {
+    height: 30px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 14px;
+    fill: #28d980;
+    svg {
+      width: 14px;
+    }
+    span {
+      margin-left: 10px;
+      color: #28d980;
+    }
+  }
+
+  .coin-down {
+    height: 30px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 14px;
+    fill: #d92861;
+    svg {
+      width: 14px;
+    }
+    span {
+      margin-left: 10px;
+      color: #d92861;
+    }
+  }
+}

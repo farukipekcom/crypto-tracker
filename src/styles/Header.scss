@@ -1,0 +1,38 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+nav {
+  margin: 30px;
+
+  ul {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    @include mq("tablet") {
+      justify-content: flex-start;
+    }
+    @include mq("desktop") {
+      justify-content: flex-start;
+    }
+    @include mq("large") {
+      justify-content: flex-start;
+    }
+  }
+  ul li {
+    list-style-type: none;
+    margin-left: 20px;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 24px;
+    transition: background-color 0.2s;
+    padding: 5px 10px;
+  }
+  a:hover {
+    background-color: $blue;
+    transition: background-color 0.2s;
+    border-radius: 5px;
+  }
+}

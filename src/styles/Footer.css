@@ -1,0 +1,59 @@
+.footer {
+  background-color: #393ffb;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.footer .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 20px;
+}
+
+@media (min-width: 1240px) {
+  .footer .content {
+    margin: 0 auto;
+    width: 1200px;
+  }
+}
+
+.footer .content .social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .content .social-links a {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 36px;
+  width: 36px;
+  margin-left: 10px;
+}
+
+.footer .content .social-links svg {
+  height: 24px;
+}
+/*# sourceMappingURL=Footer.css.map */

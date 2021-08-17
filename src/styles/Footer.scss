@@ -1,0 +1,37 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+
+.footer {
+  background-color: #393ffb;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    margin-right: 20px;
+    @include mq("large") {
+      margin: 0 auto;
+      width: 1200px;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 36px;
+        width: 36px;
+        margin-left: 10px;
+      }
+      svg {
+        height: 24px;
+      }
+    }
+  }
+}
