@@ -536,7 +536,7 @@
   background-color: #393ffb;
 }
 
-.coin-container .coin-up {
+.coin-container .bottom .history .coin-up {
   height: 30px;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -552,16 +552,16 @@
   fill: #28d980;
 }
 
-.coin-container .coin-up svg {
+.coin-container .bottom .history .coin-up svg {
   width: 14px;
 }
 
-.coin-container .coin-up span {
+.coin-container .bottom .history .coin-up span {
   margin-left: 10px;
   color: #28d980;
 }
 
-.coin-container .coin-down {
+.coin-container .bottom .history .coin-down {
   height: 30px;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -577,12 +577,36 @@
   fill: #d92861;
 }
 
-.coin-container .coin-down svg {
+.coin-container .bottom .history .coin-down svg {
   width: 14px;
 }
 
-.coin-container .coin-down span {
+.coin-container .bottom .history .coin-down span {
   margin-left: 10px;
   color: #d92861;
+}
+
+.coin-container .w3-light-grey {
+  width: 100%;
+  height: 5px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.coin-container .w3-green,
+.coin-container .w3-hover-green:hover {
+  background-color: #28d980;
+  border-radius: 10px;
+  position: relative;
+}
+
+.coin-container .progress-circle {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #28d980;
+  right: -5px;
+  top: -5px;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=Coin.css.map */

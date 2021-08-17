@@ -352,40 +352,62 @@
       .ath:hover {
         background-color: $blue;
       }
+      .coin-up {
+        height: 30px;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        font-size: 14px;
+        fill: #28d980;
+        svg {
+          width: 14px;
+        }
+        span {
+          margin-left: 10px;
+          color: #28d980;
+        }
+      }
+
+      .coin-down {
+        height: 30px;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        font-size: 14px;
+        fill: #d92861;
+        svg {
+          width: 14px;
+        }
+        span {
+          margin-left: 10px;
+          color: #d92861;
+        }
+      }
     }
   }
 
-  .coin-up {
-    height: 30px;
-    width: max-content;
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-    font-size: 14px;
-    fill: #28d980;
-    svg {
-      width: 14px;
-    }
-    span {
-      margin-left: 10px;
-      color: #28d980;
-    }
+  // PRogress Bar
+  .w3-light-grey {
+    width: 100%;
+    height: 5px;
+    background-color: #ffffff;
+    border-radius: 10px;
   }
-
-  .coin-down {
-    height: 30px;
-    width: max-content;
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-    font-size: 14px;
-    fill: #d92861;
-    svg {
-      width: 14px;
-    }
-    span {
-      margin-left: 10px;
-      color: #d92861;
-    }
+  .w3-green,
+  .w3-hover-green:hover {
+    background-color: #28d980;
+    border-radius: 10px;
+    position: relative;
+  }
+  .progress-circle {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #28d980;
+    right: -5px;
+    top: -5px;
+    border-radius: 50%;
   }
 }
