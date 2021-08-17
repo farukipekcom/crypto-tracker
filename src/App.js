@@ -12,7 +12,7 @@ function App() {
       <HeaderBottom />
       <Switch>
         <Route exact path="/">
-          <List cryptoList={crypto} />
+          <List />
         </Route>
         <Route path="/crypto/:id" component={Coin}></Route>
       </Switch>

@@ -48,7 +48,7 @@
             color: $color;
             margin-top: 20px;
             border-radius: 2px;
-            padding: 1px 8px;
+            padding: 5px 10px;
             font-size: 12px;
             width: max-content;
           }
@@ -63,12 +63,13 @@
           .link {
             display: flex;
             align-items: center;
+            justify-content: center;
             a {
               display: flex;
               text-decoration: none;
               border-radius: 5px;
               font-size: 12px;
-              padding: 4px 8px;
+              padding: 5px 10px;
               background-color: $background-dark;
               color: $color;
             }
@@ -78,6 +79,7 @@
             }
             svg {
               width: 14px;
+              height: 14px;
               margin-right: 5px;
             }
           }
